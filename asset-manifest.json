@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/arun-portfolio/static/css/main.1ea2a388.css",
+    "main.js": "/arun-portfolio/static/js/main.1d8b823b.js",
+    "index.html": "/arun-portfolio/index.html",
+    "main.1ea2a388.css.map": "/arun-portfolio/static/css/main.1ea2a388.css.map",
+    "main.1d8b823b.js.map": "/arun-portfolio/static/js/main.1d8b823b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ea2a388.css",
+    "static/js/main.1d8b823b.js"
+  ]
+}
