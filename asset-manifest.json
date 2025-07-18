@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/arun-portfolio/static/css/main.e2778f99.css",
+    "main.css": "/arun-portfolio/static/css/main.302e2539.css",
     "main.js": "/arun-portfolio/static/js/main.96a57281.js",
     "index.html": "/arun-portfolio/index.html",
-    "main.e2778f99.css.map": "/arun-portfolio/static/css/main.e2778f99.css.map",
+    "main.302e2539.css.map": "/arun-portfolio/static/css/main.302e2539.css.map",
     "main.96a57281.js.map": "/arun-portfolio/static/js/main.96a57281.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2778f99.css",
+    "static/css/main.302e2539.css",
     "static/js/main.96a57281.js"
   ]
 }
