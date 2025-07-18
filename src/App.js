@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
@@ -10,12 +10,22 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
 import "./App.css";
+import "./css/dark-theme.css";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", darkMode);
+  }, [darkMode]);
+
   return (
     <Router>
       <div className="app-container">
-        <Sidebar />
+        <Sidebar
+          toggleDarkMode={() => setDarkMode(!darkMode)}
+          isDark={darkMode}
+        />
         <div className="main-content">
           <Routes>
             <Route path="/" element={<About />} />

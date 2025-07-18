@@ -1,0 +1,128 @@
+.about-container {
+  padding: 0px;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #e5e4e4;
+  padding: 40px;
+  border-radius: 0;
+  margin-bottom: 40px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 300px;
+  padding-right: 20px;    
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-text h3 {
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.6;
+}
+
+.about-text a {
+  color: #28a745;
+  text-decoration: underline;
+}
+
+.about-buttons {
+  margin-top: 20px;
+}
+
+.about-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #28a745;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.skills-section {
+  margin-top: 60px;
+}
+
+.skills-section h2 {
+  font-size: 28px;
+  border-left: 4px solid #28a745;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.skill-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skill-icon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+body, .about-container, .skill-card, .about-header {
+  transition: background-color 0.3s, color 0.3s;
+}

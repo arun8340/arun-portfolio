@@ -1,0 +1,70 @@
+/* Global Dark Theme Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Headers and Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a {
+  color: #e0e0e0;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #4ade80; /* Tailwind green-400 */
+}
+
+body.dark-mode a:hover {
+  color: #22c55e; /* Tailwind green-500 */
+}
+
+/* Cards, Sections, Containers */
+body.dark-mode .about-container,
+body.dark-mode .about-header,
+body.dark-mode .skills-section,
+body.dark-mode .skills-grid,
+body.dark-mode .skill-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* Buttons */
+body.dark-mode .btn-primary {
+  background-color: #22c55e;
+  color: white;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #3f3f46;
+  color: white;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Sidebar adjustments if needed */
+body.dark-mode .sidebar {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Toggle and Hire Me Button */
+body.dark-mode .toggle-mode,
+body.dark-mode .hire-button {
+  border-color: white;
+  color: white;
+}
+
+body.dark-mode .main-content {
+  background-color: #121212;
+  color: #e0e0e0;
+}

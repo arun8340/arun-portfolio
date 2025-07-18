@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// Sidebar.js
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   FaUser,
@@ -13,39 +14,16 @@ import {
   FaTwitter,
   FaMoon,
   FaSun,
-  FaBars,
 } from "react-icons/fa";
 import { SiThreads } from "react-icons/si";
 import "./Sidebar.css";
 
-function Sidebar() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+function Sidebar({ darkMode, toggleDarkMode }) {
   const location = useLocation();
 
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
-    <>
-      {/* Mobile Toggle Button */}
-      <button
-        className="sidebar-toggle"
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        <FaBars />
-      </button>
-
-      <div
-        className={`sidebar ${darkMode ? "dark" : ""} ${
-          sidebarOpen ? "open" : ""
-        }`}
-      >
+    <div className={`sidebar ${darkMode ? "dark" : ""}`}>
+      <div className="sidebar-content">
         <div className="top-section">
           <h2>M V Arun Prasad</h2>
           <img
@@ -89,34 +67,10 @@ function Sidebar() {
             </li>
             <li>
               <Link
-                to="/portfolio"
-                className={location.pathname === "/portfolio" ? "active" : ""}
-              >
-                <FaBriefcase /> Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/services"
-                className={location.pathname === "/services" ? "active" : ""}
-              >
-                <FaServicestack /> Services
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/resume"
                 className={location.pathname === "/resume" ? "active" : ""}
               >
                 <FaFileAlt /> Resume
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={location.pathname === "/blog" ? "active" : ""}
-              >
-                <FaBlog /> Blog
               </Link>
             </li>
             <li>
@@ -129,21 +83,18 @@ function Sidebar() {
             </li>
           </ul>
         </nav>
-
-        <div className="bottom-section">
-          <a href="#hire" className="hire-btn">
-            Hire Me
-          </a>
-          <button
-            className="toggle-mode"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <FaSun /> : <FaMoon />}{" "}
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
-        </div>
       </div>
-    </>
+
+      <div className="bottom-section">
+        <a href="#hire" className="hire-btn">
+          Hire Me
+        </a>
+        <button className="toggle-mode" onClick={toggleDarkMode}>
+          {darkMode ? <FaSun /> : <FaMoon />}{" "}
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
+      </div>
+    </div>
   );
 }
 
