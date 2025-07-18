@@ -60,7 +60,7 @@ function Sidebar({ darkMode, toggleDarkMode }) {
             <li>
               <Link
                 to="/"
-                className={location.pathname === "/" ? "active" : ""}
+                className={location.pathname === "/about" ? "active" : ""}
               >
                 <FaUser /> About Me
               </Link>

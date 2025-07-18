@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
 import About from "./pages/About";
@@ -20,7 +25,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router>
+    <Router basename="/arun-portfolio">
       <div className="app-container">
         <Sidebar
           toggleDarkMode={() => setDarkMode(!darkMode)}
@@ -28,7 +33,8 @@ function App() {
         />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<About />} />
+            <Route path="/" element={<Navigate to="/about" replace />} />
+            <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/services" element={<Services />} />
             <Route path="/resume" element={<Resume />} />
